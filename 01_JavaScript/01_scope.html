@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+
+            function foo() {
+                var x = 3;
+                let y = 3;
+                {
+                    var x = 4;  // function scope
+                    let y = 4;  // block scope
+                }
+                alert(x);
+                alert(y);
+            }
+
+            foo();
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

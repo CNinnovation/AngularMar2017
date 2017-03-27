@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+
+            function foo() {
+                var b1 = new Object();
+                b1.title = "Professional C#";
+                b1["publisher"] = "Wrox Press";
+                b1["title"] = "Professional C# 7.1";
+
+                alert(b1.title);
+            }
+
+            function useObjectLiteral() {
+                var b2 = {
+                    title: "Professional C#",
+                    publisher : "Wrox Press"
+                };
+
+                b2.author = "Christian Nagel";
+
+                for (var s in b2) {
+                    alert(s + ": " + b2[s]);
+                }
+            }
+
+            function Greeter(message) {
+                this.message = message;
+
+               /* this.greet = function(name) {
+                    alert(this.message + " " + name);
+                }
+                */
+            }
+
+            Greeter.prototype.greet = function(name) {
+                alert(this.message + " " + name);
+            };
+
+            function useConstructor() {
+                var g1 = new Greeter("hello");
+            
+                g1.greet("Katharina");
+
+                var g2 = new Greeter("Welcome");
+
+
+            }
+
+            useConstructor();
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

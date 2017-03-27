@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+
+            function foo() {
+                var o = arguments[0];
+                alert(o);
+                var x = 42;
+                x = "astring";
+                alert(x.constructor.name);
+
+                var a = 1;
+                var b = 2;
+
+                eval('alert(a + b)');
+            }
+
+            function bar(x, y) {
+
+            }
+
+            bar();
+            foo("aparam");
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
