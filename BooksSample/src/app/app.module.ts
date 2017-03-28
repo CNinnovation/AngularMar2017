@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { LocationStrategy, HashLocationStrategy, PathLocationStrategy } from '@angular/common';
@@ -14,10 +14,12 @@ import { BookDetailComponent } from './book-detail/book-detail.component';
 import { EmptyPageComponent } from './empty-page/empty-page.component';
 import { BooksService } from './books.service';
 import { LoggerService } from './logger.service';
+import { ObserverSampleComponent } from './observer-sample/observer-sample.component';
 
 const appRoutes: Routes = [
   { path: 'bookslist', component: BooksListComponent },
   { path: 'book', component: BookDetailComponent },
+  { path: 'observer', component: ObserverSampleComponent },
   { path: '*', component: EmptyPageComponent }
 ];
 
@@ -30,11 +32,13 @@ const appRoutes: Routes = [
     TitleInfoComponent,
     MenusComponent,
     BookDetailComponent,
-    EmptyPageComponent
+    EmptyPageComponent,
+    ObserverSampleComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],

@@ -1,3 +1,13 @@
 <p>
-  book-detail works!
+ Book Detail
 </p>
+
+<h3>{{selectedBook?.title}}</h3>
+
+<span>{{selectedBook?.releaseDate | date: 'MM/dd/yy'}}</span>
+
+<div>{{selectedBook?.publisher | uppercase}}</div>
+
+<br />
+
+<img *ngIf="selectedBook?.imageUrl != undefined" [src]="selectedBook.imageUrl">

@@ -1,4 +1,7 @@
 <h2>Books List Component</h2>
+
+<button (click)="getbooks()">Load books</button>
+
 <ul>
   <li *ngFor="let book of books">
     {{book.title}}

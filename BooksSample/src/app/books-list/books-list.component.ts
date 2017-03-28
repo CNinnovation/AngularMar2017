@@ -17,6 +17,10 @@ export class BooksListComponent implements OnInit {
   public books : Book[];
 
   ngOnInit() {
+    // this.books = this.booksService.getAllBooks();
+  }
+
+  public getbooks() : void {
     this.books = this.booksService.getAllBooks();
   }
 
