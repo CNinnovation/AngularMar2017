@@ -6,6 +6,8 @@ Prepare your environment
 
 Install the actual version of Visual Studio Code from [Visual Studio Code](https://code.visualstudio.com/)
     
+
+
 ## Install Chrome
 
 Install the Chrome browser from [Google](google.com/chrome/)
