@@ -3,8 +3,8 @@
 
 <input [(ngModel)]="bookid">
 <nav>
-  <a routerLink="/book" routerLinkActive="active">Book Detail</a>
-  <br />
+  <a [routerLink]="['/book/' + bookid]" routerLinkActive="active">Book Detail</a>
+  <br /> 
   <a routerLink="/bookslist" routerLinkActive="active">Books list</a>
   <br />
     <a routerLink="/observer" routerLinkActive="active">Observer sample</a>

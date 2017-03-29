@@ -21,6 +21,7 @@ import { ParentCommunicationBComponent } from './parent-communication-b/parent-c
 import { ChildCommunicationBComponent } from './parent-communication-b/child-communication-b/child-communication-b.component';
 import { ParentCommunicationCComponent } from './parent-communication-c/parent-communication-c.component';
 import { TimerComponentComponent } from './parent-communication-c/timer-component/timer-component.component';
+import { BookListAndDetailComponent } from './book-list-and-detail/book-list-and-detail.component';
 
 const appRoutes: Routes = [
   { path: 'bookslist', component: BooksListComponent },
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     ParentCommunicationBComponent,
     ChildCommunicationBComponent,
     ParentCommunicationCComponent,
-    TimerComponentComponent
+    TimerComponentComponent,
+    BookListAndDetailComponent
   ],
   imports: [
     BrowserModule,
