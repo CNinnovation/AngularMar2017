@@ -15,12 +15,18 @@ import { EmptyPageComponent } from './empty-page/empty-page.component';
 import { BooksService } from './books.service';
 import { LoggerService } from './logger.service';
 import { ObserverSampleComponent } from './observer-sample/observer-sample.component';
+import { ParentCommunicationAComponent } from './parent-communication-a/parent-communication-a.component';
+import { ChildCommunicationAComponent } from './parent-communication-a/child-communication-a/child-communication-a.component';
+import { ParentCommunicationBComponent } from './parent-communication-b/parent-communication-b.component';
+import { ChildCommunicationBComponent } from './parent-communication-b/child-communication-b/child-communication-b.component';
+import { ParentCommunicationCComponent } from './parent-communication-c/parent-communication-c.component';
+import { TimerComponentComponent } from './parent-communication-c/timer-component/timer-component.component';
 
 const appRoutes: Routes = [
   { path: 'bookslist', component: BooksListComponent },
-  { path: 'book', component: BookDetailComponent },
+  { path: 'book:id', component: BookDetailComponent },
   { path: 'observer', component: ObserverSampleComponent },
-  { path: '*', component: EmptyPageComponent }
+  { path: '**', component: EmptyPageComponent }
 ];
 
 
@@ -33,7 +39,13 @@ const appRoutes: Routes = [
     MenusComponent,
     BookDetailComponent,
     EmptyPageComponent,
-    ObserverSampleComponent
+    ObserverSampleComponent,
+    ParentCommunicationAComponent,
+    ChildCommunicationAComponent,
+    ParentCommunicationBComponent,
+    ChildCommunicationBComponent,
+    ParentCommunicationCComponent,
+    TimerComponentComponent
   ],
   imports: [
     BrowserModule,

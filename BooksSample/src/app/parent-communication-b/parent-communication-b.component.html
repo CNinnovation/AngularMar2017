@@ -1,0 +1,8 @@
+<h3>Parent using @Output from the child</h3>
+
+<div>message from the child: {{messagefromchild}}</div>
+
+<div>Child starts here:</div>
+<app-child-communication-b (onmessage)=onmessagereceived($event)>
+  
+</app-child-communication-b>

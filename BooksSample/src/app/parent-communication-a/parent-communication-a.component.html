@@ -1,0 +1,10 @@
+<p>
+  parent-communication-a works!
+</p>
+
+<input type="text" [(ngModel)]="messagefromtheparent">
+
+Child starts here:
+<app-child-communication-a [message]="messagefromtheparent">
+  
+</app-child-communication-a>

@@ -1,0 +1,13 @@
+<h3>Parent using @ViewChild</h3>
+
+<br />
+<button (click)="onstart()">Start</button>
+<br />
+<button (click)=onstop()>Stop</button>
+<br />
+<div>{{timer.message}}</div>
+<br />
+<div>Child starts here</div>
+<app-timer-component #timer></app-timer-component>
+
+

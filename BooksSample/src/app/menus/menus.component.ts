@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menus',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenusComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit() {
     this.bookid = "42";
@@ -22,5 +23,8 @@ export class MenusComponent implements OnInit {
     this._bookid = value;
   }
   
+  public onnavigate() : void {
+    this.router.navigate(['/book', this.bookid] );
+  }
 
 }
