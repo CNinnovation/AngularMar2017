@@ -9,9 +9,11 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using MyWebAPIDatabaseSample.Models;
+using System.Web.Http.Cors;
 
 namespace MyWebAPIDatabaseSample.Controllers
 {
+    [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
     public class BooksController : ApiController
     {
         private BooksModel db = new BooksModel();
