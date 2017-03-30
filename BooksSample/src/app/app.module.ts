@@ -60,7 +60,7 @@ const appRoutes: Routes = [
   ],
   providers: [
     { provide: LocationStrategy, useClass: PathLocationStrategy },
-    { provide: BooksService, useClass: BooksService },
+    { provide: BooksService, useClass: BooksHttpService },
     BooksHttpService,
     LoggerService
   ],

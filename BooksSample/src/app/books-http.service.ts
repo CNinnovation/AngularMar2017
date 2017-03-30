@@ -9,7 +9,7 @@ import { Book } from './book';
 
 @Injectable()
 export class BooksHttpService {
-   private booksUrl = 'api/books';  // URL to web API
+   private booksUrl = 'http://localhost:2842/api/books';  // URL to web API
 
   constructor (private http: Http) {}
 
