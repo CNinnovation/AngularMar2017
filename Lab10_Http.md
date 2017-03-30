@@ -17,3 +17,5 @@ Create an ASP.NET Web API services with access to the database using ADO.NET Ent
 4. Deploy the Angular Application to the ASP.NET Web API project
 
 5. Test and run the application
+
+> To invoke the ASP.NET Web API service from a client not coming from the same web site (e.g the Angular application hosted on a different port), CORS must be enabled: [Enable CORS with ASP.NET Web API](https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/enabling-cross-origin-requests-in-web-api)
