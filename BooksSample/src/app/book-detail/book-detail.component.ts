@@ -17,7 +17,7 @@ export class BookDetailComponent implements OnInit {
 
   ngOnInit() {
     this.navigationParameter = this.route.snapshot.params['id'];
-    this.selectedBook = this.booksService.getAllBooks()[0];
+//    this.selectedBook = this.booksService.getAllBooks()[0];
 
    // this.selectionService.subscibe = this.selectionChanged;
       this.selectionService.subscibe = s => {

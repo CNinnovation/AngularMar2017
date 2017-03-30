@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule, Http } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { LocationStrategy, HashLocationStrategy, PathLocationStrategy } from '@angular/common';
 
@@ -22,6 +22,7 @@ import { ChildCommunicationBComponent } from './parent-communication-b/child-com
 import { ParentCommunicationCComponent } from './parent-communication-c/parent-communication-c.component';
 import { TimerComponentComponent } from './parent-communication-c/timer-component/timer-component.component';
 import { BookListAndDetailComponent } from './book-list-and-detail/book-list-and-detail.component';
+import { BooksHttpService } from './books-http.service';
 
 const appRoutes: Routes = [
   { path: 'bookslist', component: BooksListComponent },
@@ -54,11 +55,13 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
+    JsonpModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
     { provide: LocationStrategy, useClass: PathLocationStrategy },
-    BooksService,
+    { provide: BooksService, useClass: BooksService },
+    BooksHttpService,
     LoggerService
   ],
   bootstrap: [AppComponent]
